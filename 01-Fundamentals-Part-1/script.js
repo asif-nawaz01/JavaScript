@@ -91,7 +91,7 @@ console.log(ageVikky, ageRaj);
 console.log(ageVikky*2, ageVikky/10, 2**3);
 // 2**3 means that the 2 to the power of 3 which is equal to 2 * 2 * 2
 
-const firs_tName = "Asif";
+const first_Name = "Asif";
 const last_Name = "Nawaz";
 console.log(first_Name + " " + last_Name);
 
