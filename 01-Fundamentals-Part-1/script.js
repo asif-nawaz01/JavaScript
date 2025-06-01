@@ -67,3 +67,16 @@ year = 1991;
 console.log(typeof year);
 
 console.log(typeof null);
+
+// *********Types of Declearing a variables*******
+
+let age = 22;
+age = 23;
+
+const birthYear = 2003;
+
+var job = 'Programmer';
+job = 'Teacher';
+
+lastName = 'Nawaz';
+console.log(lastName);
