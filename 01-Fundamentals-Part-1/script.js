@@ -18,7 +18,7 @@ let Jonas_Matilda = "JM";
 let _new = 77;
 let name = "Jonas";
 
-// Naming Conventions
+// Variables Name Conventions
 
 let myFisrtJob = "programmer";
 let myCurrentJob = "Teacher";
@@ -36,4 +36,9 @@ console.log("Continent is " + Continent);
 console.log("Country is " + Country);
 console.log("The population is " + population);
 
+// *****DataTypes in JavaScript ******
 
+let JavaScriptIsFun = true;
+console.log(JavaScriptIsFun);
+
+console.log( typeof true );
