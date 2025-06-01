@@ -16,11 +16,11 @@ console.log(firstName);
 
 let Asif_Nawaz = "AN";
 let _new = 77;
-let name = "Asif";
+let name = "Nawaz";
 
 // Variables Name Conventions
 
-let person ='Nawaz'
+let person = 'Nawaz'
 let PI = 3.1415;
 let myFisrtJob = "programmer";
 let myCurrentJob = "Teacher";
@@ -41,23 +41,22 @@ console.log("The population is " + population);
 
 // *****DataTypes in JavaScript ******
 
-// let javaScriptIsFun= true;
-// console.log(javaScriptIsFun);
+let javascriptIsFun = true;
+console.log(javascriptIsFun);
 
-// console.log(typeof true); 
-// console.log(typeof javaScriptIsFun);
-// console.log(typeof 37);
-// console.log(typeof 'Nawaz');
+console.log(typeof true);
+console.log(typeof javascriptIsFun);
+console.log(typeof 'Asif');
+console.log(typeof 37);
 
+javascriptIsFun = "Yes!"
+console.log(typeof javascriptIsFun);
 
-// javaScriptIsFun = 'YES!';
-// console.log(typeof javaScriptIsFun);
+let year;
+console.log(year);
+console.log(typeof year);
 
-// let year;
-// console.log(year);
-// console.log(typeof year);
+year = 1991;
+console.log(typeof year);
 
-// year = 1991;
-// console.log(typeof year);
-
-// console.log(typeof null);
+console.log(typeof null);
