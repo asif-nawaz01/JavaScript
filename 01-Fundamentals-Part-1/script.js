@@ -321,3 +321,45 @@ if(scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
 else {
     console.log('No one win the trophy');
 }
+
+//********Switch Statement *********
+
+switch (day) {
+  case 'monday': // day === 'monday'
+    console.log('Plan Your schedule');
+    console.log('Arrange a  meetup');
+    break;
+  case 'tuesday':
+    console.log('Prepare for your work');
+    break;
+  case 'wednesday':
+  case 'thursday':
+    console.log('Write solutions');
+    break;
+  case 'friday':
+    console.log('Record Your Data');
+    break;
+  case 'saturday':
+  case 'sunday':
+    console.log('Enjoy the weekend :D');
+    break;
+  default:
+    console.log('Not a valid day!');
+} 
+
+if (day === 'monday') {
+  console.log('Plan Your schedule');
+  console.log('Arrange a  meetup');
+} else if (day === 'tuesday') {
+  console.log('Prepare for your work');
+} else if (day === 'wednesday' || day === 'thursday') {
+  console.log('Write solutions');
+} else if (day === 'friday') {
+  console.log('Record Your Datas');
+} else if (day === 'saturday' || day === 'sunday') {
+  console.log('Enjoy the weekend :D');
+} else {
+  console.log('Not a valid day!');
+}
+
+
