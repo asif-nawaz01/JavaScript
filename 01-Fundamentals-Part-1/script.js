@@ -7,7 +7,7 @@ console.log('143');
     
 //****** values & variables******
 
-let firstName = "JavaScript";
+let firstName = "Asif";
 let first = 'Nawaz';
 
 console.log(firstName);
@@ -80,3 +80,32 @@ job = 'Teacher';
 
 lastName = 'Nawaz';
 console.log(lastName);
+
+// ********Basics Operators******
+
+const now = 2037;
+const ageVikky = now -1991;
+const ageRaj = now - 2018;
+console.log(ageVikky, ageRaj);
+
+console.log(ageVikky*2, ageVikky/10, 2**3);
+// 2**3 means that the 2 to the power of 3 which is equal to 2 * 2 * 2
+
+const firs_tName = "Asif";
+const last_Name = "Nawaz";
+console.log(first_Name + " " + last_Name);
+
+let x = 10 + 5; // 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; //x = x + 1 = 101
+x--;
+x--;
+console.log(x);
+
+console.log(ageVikky > ageRaj); // >,<,>=,<=
+console.log(ageRaj >= 18);
+
+const isFullAge = ageRaj >= 18;
+
+console.log(now - 1991 > now - 2019);
