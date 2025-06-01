@@ -41,23 +41,23 @@ console.log("The population is " + population);
 
 // *****DataTypes in JavaScript ******
 
-let javaScriptIsFun= true;
-console.log(javaScriptIsFun);
+// let javaScriptIsFun= true;
+// console.log(javaScriptIsFun);
 
- console.log(typeof true); 
-console.log(typeof javaScriptIsFun);
-console.log(typeof 37);
-console.log(typeof 'Nawaz');
+// console.log(typeof true); 
+// console.log(typeof javaScriptIsFun);
+// console.log(typeof 37);
+// console.log(typeof 'Nawaz');
 
 
-javaScriptIsFun = 'YES!';
-console.log(typeof javaScriptIsFun);
+// javaScriptIsFun = 'YES!';
+// console.log(typeof javaScriptIsFun);
 
-let year;
-console.log(year);
-console.log(typeof year);
+// let year;
+// console.log(year);
+// console.log(typeof year);
 
-year = 1991;
-console.log(typeof year);
+// year = 1991;
+// console.log(typeof year);
 
-console.log(typeof null);
+// console.log(typeof null);
