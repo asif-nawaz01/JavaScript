@@ -49,6 +49,13 @@ console.log(typeof javascriptIsFun);
 console.log(typeof 'Asif');
 console.log(typeof 37);
 
+let isIsland = false;
+let language;
+console.log(typeof isIsland);
+console.log(typeof population);
+console.log(typeof Country);
+console.log(typeof language);
+
 javascriptIsFun = "Yes!"
 console.log(typeof javascriptIsFun);
 
