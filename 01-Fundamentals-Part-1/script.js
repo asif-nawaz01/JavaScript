@@ -169,3 +169,103 @@ console.log('String with \n multiple\n line');
 console.log(`This is a
 multiple line 
 comment`);
+
+// ******if and else block*******
+
+const Age = 16;
+const isOldEnough = Age >= 18;
+
+if (isOldEnough) {
+    console.log("You are Eligible for  driving License");
+} else {
+    console.log("You are Eligible for driving License after " + (18 - age) + " years");
+}
+
+
+let century;
+const BirthYear = 2003;
+if (BirthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
+
+//******Challenges_02 Based on _01 ******
+
+const MarksWeight2 = 95;
+const MarksHeight2 = 1.88;
+
+const JohnWeight2 = 85;
+// const JohnHeight2 = 1.76;
+
+let MarkBMI2 = MarksWeight2/(MarksHeight2 ** 2);
+let JohnBMI2 = johnWeight2/(JohnHeight2 ** 2);
+
+let MarkHigherBMI2 = MarkBMI2 > JohnBMI2;
+console.log(MarkBMI2, JohnBMI2, MarkHigherBMI2);
+
+if (JohnBMI2 > MarkBMI2) {
+    console.log("John has a higher BMI index (" + JohnBMI2 + ") than marks BMI (" + MarkBMI2 + ")");
+} else {
+    console.log("Mark has a higher BMI index (" + MarkBMI2 + ") than Johns BMI (" + JohnBMI2 + ")");
+}
+
+//****Type conversion******
+
+const inputYear = '1991' ;
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Nawaz'));
+console.log(typeof NaN)
+
+console.log(String(23), 23);
+
+//********Type coercion********
+
+console.log('I am ' + 21 + ' years old');
+console.log('23' - '10'- 3);
+console.log('23' + '10'+ 3);
+console.log('23' * '10');
+console.log('23' / '10');
+console.log('23' % '10');
+
+let n = '1'+ 1;
+n = n -1;
+console.log(n);
+
+console.log( 2+3+4 +'5');
+console.log('10'-'4'-'3'-2+'5');
+
+
+//****** 5 falsy values -->  0, null, ' ', undefined, NaN******
+
+const Fund = 100;
+if(Fund) {
+    console.log("Don't spend it all");
+}else {
+    console.log('You should get a job!');
+}
+
+let height = 5.9;
+if(height) {
+    console.log('Yor are eligible Now ');
+}else {
+    console.log('Height is UNNDEFINED');
+}
+
+// ******equality Operators******
+
+const _age = '18';
+if (_age === 18) {
+    console.log("You just became an adult : D(Strict)");
+} 
+
+if (age == 18) {
+    console.log("You just Became an Adult : D(Loose)");
+}
+
+const favourite = Number(prompt("What is your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
