@@ -269,3 +269,55 @@ if (age == 18) {
 const favourite = Number(prompt("What is your favourite number?"));
 console.log(favourite);
 console.log(typeof favourite);
+
+if (favourite == 23) { // 22 === 23 -> FALSE
+    console.log('cool! 23 is amazing number!');
+} else if(favourite==7) {
+    console.log('7 is a cool number');
+}else{
+    console.log('Number is not 23 or 7')
+}
+
+if (favourite !==23) console.log('Why not 23!');
+
+
+//*******logical operators*********
+
+//*****AND Operator ******
+
+const hasDriveringLicense = true; // A
+const hasGoodVision = true; //B
+
+console.log(hasDriveringLicense && hasGoodVision);
+console.log(hasDriveringLicense || hasGoodVision);
+
+if (hasDriveringLicense && hasGoodVision) {
+    console.log('Nawaz is able to drive!');
+}else{
+    console.log('Someone else should drive...');
+}
+
+const isTired = true; // C
+console.log(hasDriveringLicense && hasGoodVision && isTired);
+
+if (hasDriveringLicense && hasGoodVision && isTired) {
+    console.log('Nawaz is able to drive!');
+}else{
+    console.log('Someone else should drive...');
+}
+
+// *********Coding Challenges_03*******
+
+const scoreDolphins = (97+112+80)/3;
+const scoreKoalas = (100+95+50)/3;
+console.log(scoreDolphins, scoreKoalas);
+
+if(scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log('Dolphins win the trophy');
+
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+    console.log('Both win the trophy');
+} else if (scoreDolphins == scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100);
+else {
+    console.log('No one win the trophy');
+}
