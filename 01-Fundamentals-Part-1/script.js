@@ -2,29 +2,32 @@
     if (js==="amazing") 
     console.log(40+8+13-10);
     
-console.log("joanas");
+console.log("Nawaz");
 console.log('143');
     
 //****** values & variables******
 
 let firstName = "JavaScript";
-let first = 'jonas';
+let first = 'Nawaz';
 
 console.log(firstName);
 console.log(first);
 console.log(firstName);
 
-let Jonas_Matilda = "JM";
+let Asif_Nawaz = "AN";
 let _new = 77;
-let name = "Jonas";
+let name = "Asif";
 
 // Variables Name Conventions
 
+let person ='Nawaz'
+let PI = 3.1415;
 let myFisrtJob = "programmer";
 let myCurrentJob = "Teacher";
 
 let Job1 = 'programmer';
 let Job2 = 'Teacher';
+let $function = 37;
 
 console.log(myCurrentJob);
 
@@ -38,7 +41,23 @@ console.log("The population is " + population);
 
 // *****DataTypes in JavaScript ******
 
-let JavaScriptIsFun = true;
-console.log(JavaScriptIsFun);
+let javaScriptIsFun= true;
+console.log(javaScriptIsFun);
 
-console.log( typeof true );
+ console.log(typeof true); 
+console.log(typeof javaScriptIsFun);
+console.log(typeof 37);
+console.log(typeof 'Nawaz');
+
+
+javaScriptIsFun = 'YES!';
+console.log(typeof javaScriptIsFun);
+
+let year;
+console.log(year);
+console.log(typeof year);
+
+year = 1991;
+console.log(typeof year);
+
+console.log(typeof null);
