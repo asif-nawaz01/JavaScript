@@ -362,4 +362,45 @@ if (day === 'monday') {
   console.log('Not a valid day!');
 }
 
+//**********Statements and Expression********
 
+3 + 4
+1991
+true && false && !false
+
+if (23>10) {
+    const str = '23 is bigger';
+}
+const me ='Nawaz';
+console.log(`I'm ${2025-2005} years old ${me}`);
+
+
+
+// ********The Conditional (Ternary) Operator********
+
+const _Age = 23;
+// age >= 18 ? console.log('I like to drink wine') : console.log('I like to drink water');
+
+const drink = Age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+let drink2;
+if (_Age >= 18) {
+  drink2 = 'wine';
+} else {
+  drink2 = 'water';
+}
+console.log(drink2);
+
+console.log(`I like to drink ${_Age >= 18 ? 'wine' : 'water'}`);
+
+
+
+//********Challenges 04*********
+
+const bill = 430;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+
+
+                       //**********Fundamentals 01 Completed **************/
