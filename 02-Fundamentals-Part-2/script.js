@@ -224,3 +224,9 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(bills, tips, totals);
+
+
+            //  HELLO GUYSSZZ...I AM CURRENTLY OUT OF STATION SOO I WILL BE BACK 
+            //  AS SOON AS POSSIBLE AND I WILL COMPLETE THE COURSE
+            //  STAY TUNED AND KEEP LEARNING
+            //  THANK YOU FOR YOUR ...
