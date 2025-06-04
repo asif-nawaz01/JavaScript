@@ -167,66 +167,84 @@
 
 // ________Exercise__________
 
-const calcAge = function (birthYear) {
-    return 2025-2000;
-}
+// const calcAge = function (birthYear) {
+//     return 2025-2000;
+// }
 
-const year = [1991, 1996, 2000, 2003, 2015] ;
+// const year = [1991, 1996, 2000, 2003, 2015] ;
 
-const age1 = calcAge(year[0]);
-const age2 = calcAge(year[1]);
-const age3 = calcAge(year[year.length -1]);
-console.log(age1, age2, age3);
-const age = [calcAge(year[0]), calcAge(year[1]), calcAge(year[year.length -1])];
-console.log(age);
+// const age1 = calcAge(year[0]);
+// const age2 = calcAge(year[1]);
+// const age3 = calcAge(year[year.length -1]);
+// console.log(age1, age2, age3);
+// const age = [calcAge(year[0]), calcAge(year[1]), calcAge(year[year.length -1])];
+// console.log(age);
 
 
-// ----------Add elements----------
+// // ----------Add elements----------
 
-const friends = ['Nawaz', 'Vikky', 'Aarya'];
-const newLength = friends.push('Chikki-Farhan');
-console.log(friends);
-console.log(newLength);
+// const friends = ['Nawaz', 'Vikky', 'Aarya'];
+// const newLength = friends.push('Chikki-Farhan');
+// console.log(friends);
+// console.log(newLength);
 
-friends.unshift('Kaaju');
-console.log(friends);
+// friends.unshift('Kaaju');
+// console.log(friends);
 
-// --------Remove elements---------
+// // --------Remove elements---------
 
-friends.pop(); //last
-const popped = friends.pop();
-console.log(popped);
-console.log(friends);
+// friends.pop(); //last
+// const popped = friends.pop();
+// console.log(popped);
+// console.log(friends);
 
-friends.shift(friends.indexOf('Kaaju'));
-friends.shift(friends.indexOf('Bob'));
+// friends.shift(friends.indexOf('Kaaju'));
+// friends.shift(friends.indexOf('Bob'));
 
-friends.push(23);
-console.log(friends.includes('Kaaju'));
-console.log(friends.includes('Bob'));
-console.log(friends.includes('23'));
+// friends.push(23);
+// console.log(friends.includes('Kaaju'));
+// console.log(friends.includes('Bob'));
+// console.log(friends.includes('23'));
 
-if (friends.includes('Chikki-farhan')) {
-    console.log('You have a friend called Chikki');
-}
+// if (friends.includes('Chikki-farhan')) {
+//     console.log('You have a friend called Chikki');
+// }
 
  
 
-// __________Challanges 02_________
+// // __________Challanges 02_________
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-}
-// const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+// // const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
-const bills = [150, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// const bills = [150, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
-console.log(bills, tips, totals);
+// console.log(bills, tips, totals);
 
+// **********OBJECTS**********
 
-            //  HELLO GUYSSZZ...I AM CURRENTLY OUT OF STATION SOO I WILL BE BACK 
-            //  AS SOON AS POSSIBLE AND I WILL COMPLETE THE COURSE
-            //  STAY TUNED AND KEEP LEARNING
-            //  THANK YOU FOR YOUR ...
+// //DOT vs BRACKET NOTATION
+
+const Nawaz = {
+    firstName: 'Asif',
+    lastName: 'Nawaz',
+    age: 2025-2003,
+    profession: 'Student',
+    friends: ['Sakshi', 'Shriii', 'Sweta']
+};
+console.log(Nawaz);
+
+console.log(Nawaz.lastName);
+console.log(Nawaz['lastName']);
+
+const nameKey = 'Name';
+console.log(Nawaz['firstName' + nameKey]);
+console.log(Nawaz['lastName' + nameKey]);
+
+//console.log(Nawaz.'last' + nameKey) --> Wrong way
+
+      
