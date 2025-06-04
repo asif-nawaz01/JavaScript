@@ -97,17 +97,61 @@
 // Destructing Objects
 // 
 // Default values
-const { menu = [], starterMenu: starters = []} = restaurant;
-console.log(menu, starters);
+// const { menu = [], starterMenu: starters = []} = restaurant;
+// console.log(menu, starters);
 
-// Mutating variables
-let a = 111;
-let b = 999;
-const obj = {a: 23, b: 7, c: 14};
+// // Mutating variables
+// let a = 111;
+// let b = 999;
+// const obj = {a: 23, b: 7, c: 14};
 
-({a, b} = obj);
-console.log(a, b);
+// ({a, b} = obj);
+// console.log(a, b);
 
-// NESTED OBJECTS
-const {fri: {open: o, close: c}} = openingHours;
-console.log(o, c);
+// // NESTED OBJECTS
+// const {fri: {open: o, close: c}} = openingHours;
+// console.log(o, c);
+
+// const restaurant = {
+//   Name: 'Classico Italiano',
+//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+// }; 
+
+// // Spread Operators
+// const arr = [7, 8, 9];
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+// console.log(badNewArr);
+
+// const newArr = [1, 2, ...arr];
+// console.log(newArr);
+
+// console.log(...newArr);
+// console.log(1, 2, 7, 8, 9);
+
+// const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+// console.log(newMenu);
+
+// // ------copy array----------
+
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu);
+
+// // -----------Iterables: arrays, strings, maps, sets, NOT objects------------
+
+// const str = 'Nawaz';
+// const letters = [...str, ' ', 'A.'];
+// console.log(letters);
+// console.log(...str);
+
+// // ----------console.log(`${...str} Schemdtmann`);-----------
+
+// const ingredients = [prompt("let's make pasta! Ingredients 1?"), prompt("Ingredients 2?"), prompt("Ingredient 3")];
+// console.log(ingredients);
+
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+// restaurant.orderPasta(...ingredients);
+
+
