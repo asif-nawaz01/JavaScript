@@ -218,9 +218,11 @@
 // 1) Destructuring
 
 // SPREAD, because on RIGHT side of =
+
 const arr = [1, 2, ...[3, 4]];
 
 // REST, because on LEFT side of =
+
 const [a, b, ...others] = [1, 2, 3, 4, 5];
 console.log(a, b, others);
 
@@ -250,15 +252,12 @@ add(...x);
 
 
 
-
-///////////////////////////////////////////////////////////////
-
-
-
 // -------------Short Circuiting with OR operators---------------
 
 console.log('---- OR ----');
+
 // Use ANY data type, return ANY data type, short-circuiting
+
 console.log(3 || 'Asif');
 console.log('' || 'Nawaz');
 console.log(true || 0);
@@ -276,6 +275,7 @@ console.log(guests2);
 
 
 // Short Circuiting with AND operators
+
 console.log('---- AND ----');
 console.log(0 && 'Jonas');
 console.log(7 && 'Jonas');
@@ -289,3 +289,98 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
+// The Nullish Coalescing Operator
+
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+// Nullish: null and undefined (NOT 0 or '')
+
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
+
+
+
+// Logical Assignment Operators 
+
+const rest1 = {
+  name: 'Capri',
+
+  // numGuests: 20,
+
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+
+// OR assignment operator
+
+rest1.numGuests = rest1.numGuests || 10;
+rest2.numGuests = rest2.numGuests || 10;
+console.log(rest1.numGuests);
+console.log(rest2.numGuests);
+
+// Logical Assignment Operators
+
+rest1.numGuests ||= 10;
+rest2.numGuests ||= 10;
+console.log(rest1.numGuests);
+console.log(rest2.numGuests);
+
+
+// nullish assignment operator (null or undefined)
+
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+console.log(rest1.numGuests);
+console.log(rest2.numGuests);
+
+
+// AND assignment operator
+
+rest1.owner = rest1.owner && '<ANONYMOUS>';
+rest2.owner = rest2.owner && '<ANONYMOUS>';
+rest1.owner &&= '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
+
+
+//<<<<<<<<----------CODING CHALLENGE #1 --------->>>>>>>// 
+// 1.
+const [players1, players2] = game.players; // -->error
+console.log(players1, players2);
+
+// 2.
+const [gk, ...fieldPlayers] = players1;
+console.log(gk, fieldPlayers);
+
+// 3.
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+// 4.
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Periscic'];
+
+// 5.
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+console.log(team1, draw, team2);
+
+// 6.
+const printGoals = function (...players) {
+  console.log(players);
+  console.log(`${players.length} goals were scored`);
+};
+
+// printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+// printGoals('Davies', 'Muller');
+printGoals(...game.scored);
+
+// 7.
+team1 < team2 && console.log('Team 1 is more likely to win');
+team1 > team2 && console.log('Team 2 is more likely to win');
