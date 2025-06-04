@@ -247,54 +247,107 @@
 
 // //console.log(Nawaz.'last' + nameKey) --> Wrong way
 
-const interestedIn = prompt('What do you whant to know about Nawaz? Choose between firstName, lastName, age, profession, and friends');
+// const interestedIn = prompt('What do you whant to know about Nawaz? Choose between firstName, lastName, age, profession, and friends');
 
-if (Nawaz[interestedIn]) {
-    console.log(Nawaz[interestedIn]);
-}else{
-    console.log('Wrong request! Choose between firstName, lastName, age, profession, and friends');
-}
-Nawaz.location = 'Sahibganj';
-Nawaz['email'] = 'Nawaz123gmail.com';
-console.log(Nawaz);
+// if (Nawaz[interestedIn]) {
+//     console.log(Nawaz[interestedIn]);
+// }else{
+//     console.log('Wrong request! Choose between firstName, lastName, age, profession, and friends');
+// }
+// Nawaz.location = 'Sahibganj';
+// Nawaz['email'] = 'Nawaz123gmail.com';
+// console.log(Nawaz);
 
-// Challenge --> "Nawaz has 3 friends, and his best friend is called Ladooo"
+// // Challenge --> "Nawaz has 3 friends, and his best friend is called Ladooo"
 
-console.log(`${Nawaz.firstName} has ${Nawaz.friends.length} friends, and his best friend is called ${Nawaz.friends[1]}`);
+// console.log(`${Nawaz.firstName} has ${Nawaz.friends.length} friends, and his best friend is called ${Nawaz.friends[1]}`);
 
 
 //OBJECT METHODS
 
-const Nawaz = {
-  firstName: 'Asif',
-  lastName: 'Nawaz',
-  birthYeah: 2003,
-  profession: 'Student',
-  friends: ['Sakshi', 'Shrii', 'Sweta'],
-  hasDrivingLicense: true,
+// const Nawaz = {
+//   firstName: 'Asif',
+//   lastName: 'Nawaz',
+//   birthYeah: 2003,
+//   profession: 'Student',
+//   friends: ['Sakshi', 'Shrii', 'Sweta'],
+//   hasDrivingLicense: true,
 
-  // calcAge: function (birthYear) {
-  //   return 2037 - birthYear;
-  // }
+//   // calcAge: function (birthYear) {
+//   //   return 2037 - birthYear;
+//   // }
 
-  // calcAge: function () {
-  //   // console.log(this);
-  //   return 2037 - this.birthYear;
-  // }
+//   // calcAge: function () {
+//   //   // console.log(this);
+//   //   return 2037 - this.birthYear;
+//   // }
 
-  calcAge: function () {
-    this.age = 2037 - this.birthYear;
-    return this.age;
-  },
+//   calcAge: function () {
+//     this.age = 2037 - this.birthYear;
+//     return this.age;
+//   },
 
-  getSummary: function () {
-    return `${this.firstName} is a ${this.calcAge()}-year old ${Nawaz.profession}, and he has ${this.hasDrivingLicense ? 'a' : 'no'} driving license.`
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()}-year old ${Nawaz.profession}, and he has ${this.hasDrivingLicense ? 'a' : 'no'} driving license.`
+//   }
+// };
+
+// console.log(Nawaz.calcAge());
+
+// console.log(Nawaz.age);
+// console.log(Nawaz.age);
+// console.log(Nawaz.age);
+      
+// -----CODING CHALLENGE--------
+
+const mark = {
+  fullName: 'Mark Miller',
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
   }
 };
 
-console.log(Nawaz.calcAge());
+const john = {
+  fullName: 'John Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  }
+};
 
-console.log(Nawaz.age);
-console.log(Nawaz.age);
-console.log(Nawaz.age);
-      
+mark.calcBMI();
+john.calcBMI();
+
+console.log(mark.bmi, john.bmi);
+
+// "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+
+if (mark.bmi > john.bmi) {
+  console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`)
+} else if (john.bmi > mark.bmi) {
+  console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`)
+}
+
+
+//ITERATION_THE FOR LOOP
+// console.log('Lifting weights repetition 1');
+// console.log('Lifting weights repetition 2');
+// console.log('Lifting weights repetition 3');
+// console.log('Lifting weights repetition 4');
+// console.log('Lifting weights repetition 5');
+// console.log('Lifting weights repetition 6');
+// console.log('Lifting weights repetition 7');
+// console.log('Lifting weights repetition 8');
+// console.log('Lifting weights repetition 9');
+// console.log('Lifting weights repetition 10');
+
+
+// for loop keeps running while condition is true
+for(let rep = 1; rep <=30; rep++) {
+    console.log(`Lifting wights repetition ${rep}`);
+}
