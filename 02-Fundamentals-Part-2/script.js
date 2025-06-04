@@ -229,22 +229,72 @@
 
 // //DOT vs BRACKET NOTATION
 
-const Nawaz = {
-    firstName: 'Asif',
-    lastName: 'Nawaz',
-    age: 2025-2003,
-    profession: 'Student',
-    friends: ['Sakshi', 'Shriii', 'Sweta']
-};
+// const Nawaz = {
+//     firstName: 'Asif',
+//     lastName: 'Nawaz',
+//     age: 2025-2003,
+//     profession: 'Student',
+//     friends: ['Sakshi', 'Shriii', 'Sweta']
+// };
+// console.log(Nawaz);
+
+// console.log(Nawaz.lastName);
+// console.log(Nawaz['lastName']);
+
+// const nameKey = 'Name';
+// console.log(Nawaz['firstName' + nameKey]);
+// console.log(Nawaz['lastName' + nameKey]);
+
+// //console.log(Nawaz.'last' + nameKey) --> Wrong way
+
+const interestedIn = prompt('What do you whant to know about Nawaz? Choose between firstName, lastName, age, profession, and friends');
+
+if (Nawaz[interestedIn]) {
+    console.log(Nawaz[interestedIn]);
+}else{
+    console.log('Wrong request! Choose between firstName, lastName, age, profession, and friends');
+}
+Nawaz.location = 'Sahibganj';
+Nawaz['email'] = 'Nawaz123gmail.com';
 console.log(Nawaz);
 
-console.log(Nawaz.lastName);
-console.log(Nawaz['lastName']);
+// Challenge --> "Nawaz has 3 friends, and his best friend is called Ladooo"
 
-const nameKey = 'Name';
-console.log(Nawaz['firstName' + nameKey]);
-console.log(Nawaz['lastName' + nameKey]);
+console.log(`${Nawaz.firstName} has ${Nawaz.friends.length} friends, and his best friend is called ${Nawaz.friends[1]}`);
 
-//console.log(Nawaz.'last' + nameKey) --> Wrong way
 
+//OBJECT METHODS
+
+const Nawaz = {
+  firstName: 'Asif',
+  lastName: 'Nawaz',
+  birthYeah: 2003,
+  profession: 'Student',
+  friends: ['Sakshi', 'Shrii', 'Sweta'],
+  hasDrivingLicense: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // }
+
+  // calcAge: function () {
+  //   // console.log(this);
+  //   return 2037 - this.birthYear;
+  // }
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${Nawaz.profession}, and he has ${this.hasDrivingLicense ? 'a' : 'no'} driving license.`
+  }
+};
+
+console.log(Nawaz.calcAge());
+
+console.log(Nawaz.age);
+console.log(Nawaz.age);
+console.log(Nawaz.age);
       
