@@ -707,99 +707,199 @@ console.log(new Set('AnshuSharma').size);
 
 // Convert map to array
 
-console.log([...question]);
-// console.log(question.entries());
-console.log([...question.keys()]);
-console.log([...question.values()]);
+// console.log([...question]);
+// // console.log(question.entries());
+// console.log([...question.keys()]);
+// console.log([...question.values()]);
 
 
-             //**** CHALLENGE - 3 ****//
+//              //**** CHALLENGE - 3 ****//
 
-const gameEvents = new Map([
-  [17, 'GOAL'],
-  [36, 'Substitution'],
-  [47, 'GOAL'],
-  [61, 'Substitution'],
-  [64, 'Yellow card'],
-  [69, 'Red card'],
-  [70, 'Substitution'],
-  [72, 'Substitution'],
-  [76, 'GOAL'],
-  [80, 'GOAL'],
-  [92, 'Yellow card'],
-]);
+// const gameEvents = new Map([
+//   [17, 'GOAL'],
+//   [36, 'Substitution'],
+//   [47, 'GOAL'],
+//   [61, 'Substitution'],
+//   [64, 'Yellow card'],
+//   [69, 'Red card'],
+//   [70, 'Substitution'],
+//   [72, 'Substitution'],
+//   [76, 'GOAL'],
+//   [80, 'GOAL'],
+//   [92, 'Yellow card'],
+// ]);
 
-// 1.
+// // 1.
 
-const events = [...new Set(gameEvents.values())];
-console.log(events);
+// const events = [...new Set(gameEvents.values())];
+// console.log(events);
 
-// 2.
+// // 2.
 
-gameEvents.delete(64);
+// gameEvents.delete(64);
 
-// 3.
+// // 3.
 
-console.log(
-  `An event happened, on average, every ${90 / gameEvents.size} minutes`
-);
-const time = [...gameEvents.keys()].pop();
-console.log(time);
-console.log(
-  `An event happened, on average, every ${time / gameEvents.size} minutes`
-);
+// console.log(
+//   `An event happened, on average, every ${90 / gameEvents.size} minutes`
+// );
+// const time = [...gameEvents.keys()].pop();
+// console.log(time);
+// console.log(
+//   `An event happened, on average, every ${time / gameEvents.size} minutes`
+// );
 
-// 4.
+// // 4.
 
-for (const [min, event] of gameEvents) {
-  const half = min <= 45 ? 'FIRST' : 'SECOND';
-  console.log(`[${half} HALF] ${min}: ${event}`);
-}
+// for (const [min, event] of gameEvents) {
+//   const half = min <= 45 ? 'FIRST' : 'SECOND';
+//   console.log(`[${half} HALF] ${min}: ${event}`);
+// }
 
 
 
-// // Working With Strings -  1
+// // // Working With Strings -  1
 
-// const airline = 'TAP Air Portugal';
-// const plane = 'A320';
+// // const airline = 'TAP Air Portugal';
+// // const plane = 'A320';
 
-// console.log(plane[0]);
-// console.log(plane[1]);
-// console.log(plane[2]);
-// console.log('B737'[0]);
+// // console.log(plane[0]);
+// // console.log(plane[1]);
+// // console.log(plane[2]);
+// // console.log('B737'[0]);
 
-// console.log(airline.length);
-// console.log('B737'.length);
+// // console.log(airline.length);
+// // console.log('B737'.length);
 
-// console.log(airline.indexOf('r'));
-// console.log(airline.lastIndexOf('r'));
-// console.log(airline.indexOf('portugal'));
+// // console.log(airline.indexOf('r'));
+// // console.log(airline.lastIndexOf('r'));
+// // console.log(airline.indexOf('portugal'));
 
-// console.log(airline.slice(4));
-// console.log(airline.slice(4, 7));
+// // console.log(airline.slice(4));
+// // console.log(airline.slice(4, 7));
 
-// console.log(airline.slice(0, airline.indexOf(' ')));
-// console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+// // console.log(airline.slice(0, airline.indexOf(' ')));
+// // console.log(airline.slice(airline.lastIndexOf(' ') + 1));
 
-// console.log(airline.slice(-2));
-// console.log(airline.slice(1, -1));
+// // console.log(airline.slice(-2));
+// // console.log(airline.slice(1, -1));
 
-// const checkMiddleSeat = function (seat) {
+// // const checkMiddleSeat = function (seat) {
 
-//   // B and E are middle seats
+// //   // B and E are middle seats
 
-//   const s = seat.slice(-1);
-//   if (s === 'B' || s === 'E') console.log('You got the middle seat');
-//   else console.log('You got lucky');
+// //   const s = seat.slice(-1);
+// //   if (s === 'B' || s === 'E') console.log('You got the middle seat');
+// //   else console.log('You got lucky');
+// // };
+
+// // checkMiddleSeat('11B');
+// // checkMiddleSeat('23C');
+// // checkMiddleSeat('3E');
+
+// // console.log(new String('adii'));
+// // console.log(typeof new String('adii'));
+
+// // console.log(typeof new String('adii').slice(1));
+
+
+// // Practice exercise
+
+// const checkBaggage = function (items) {
+//   const baggage = items.toLowerCase();
+
+//   if (baggage.includes('knife') || baggage.includes('gun')) {
+//     console.log('You are NOT allowed on board');
+//   } else {
+//     console.log('Welcome aboard!');
+//   }
 // };
 
-// checkMiddleSeat('11B');
-// checkMiddleSeat('23C');
-// checkMiddleSeat('3E');
-
-// console.log(new String('adii'));
-// console.log(typeof new String('adii'));
-
-// console.log(typeof new String('adii').slice(1));
+// checkBaggage('I have a laptop, some Food and a pocket Knife');
+// checkBaggage('Socks and camera');
+// checkBaggage('Got some snacks and a gun for protection');
 
 
+
+// // Working With Strings - Part 3
+
+// // Split and join
+
+// console.log('a+very+nice+string'.split('+'));
+// console.log('Sakshi'.split(' '));
+
+// const [firstName, lastName] = 'Sakshi'.split(' ');
+
+// const newName = ['Mrs.', firstName, lastName.toUpperCase()].join(' ');
+// console.log(newName);
+
+// const capitalizeName = function (name) {
+//   const names = name.split(' ');
+//   const namesUpper = [];
+
+//   for (const n of names) {
+
+//     // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+
+//     namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+//   }
+//   console.log(namesUpper.join(' '));
+// };
+
+// capitalizeName('Shrii');
+// capitalizeName('sakshi');
+
+// // Padding
+
+// const message = 'Go to gate 23!';
+// console.log(message.padStart(20, '+').padEnd(30, '+'));
+// console.log('sakshi'.padStart(20, '+').padEnd(30, '+'));
+
+// const maskCreditCard = function (number) {
+//   const str = number + '';
+//   const last = str.slice(-4);
+//   return last.padStart(str.length, '*');
+// };
+
+// console.log(maskCreditCard(64637836));
+// console.log(maskCreditCard(43378463864647384));
+// console.log(maskCreditCard('334859493847755774747'));
+
+// // Repeat
+// const message2 = 'Bad waether... All Departues Delayed... ';
+// console.log(message2.repeat(5));
+
+// const planesInLine = function (n) {
+//   console.log(`There are ${n} planes in line ${'🛩'.repeat(n)}`);
+// };
+// planesInLine(5);
+// planesInLine(3);
+// planesInLine(12);
+
+
+//              // CHALLENGE - 3 //
+
+            
+// document.body.append(document.createElement('textarea'));
+// document.body.append(document.createElement('button'));
+
+// document.querySelector('button').addEventListener('click', function () {
+//   const text = document.querySelector('textarea').value;
+//   const rows = text.split('\n');
+
+//   for (const [i, row] of rows.entries()) {
+//     const [first, second] = row.toLowerCase().trim().split('_');
+
+//     const output = `${first}${second.replace(
+//       second[0],
+//       second[0].toUpperCase()
+//     )}`;
+//     console.log(`${output.padEnd(20)}${repeat(i + 1)}`);
+//   }
+// });
+                  
+                    
+    // ***************COMPLETED*****************
+                  
+              
+                
