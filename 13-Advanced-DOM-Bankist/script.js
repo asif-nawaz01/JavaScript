@@ -178,3 +178,105 @@
 // logo.classList.toggle('c');
 // logo.classList.contains('c'); // not includes
 
+// IMPLEMENTING SMOOTH SCROLLING
+
+// const btnScrollTo = document.querySelector('.btn--scroll-to');
+// const section1 = document.querySelector('#section--1');
+
+// btnScrollTo.addEventListener('click', function(e) {
+//   const s1coords = section1.getBoundingClientRect();
+//   console.log(s1coords);
+
+//   console.log(e.target.getBoundingClientRect());
+
+//   console.log('Current scroll (X/Y)', window.pageXOffset, pageYOffset);
+
+//   console.log
+//   ('height/width viewport',
+//     document.documentElement.clientHeight,
+//     document.documentElement.clientWidth
+//   );
+
+//   // Scrolling
+//     window.scrollTo(
+//      s1coords.left + window.pageXOffset,
+//      s1coords.top + window.pageYOffset
+//    );
+
+//    window.scrollTo({
+//      left: s1coords.left + window.pageXOffset,
+//      top: s1coords.top + window.pageYOffset,
+//      behavior: 'smooth',
+//    });
+
+//   section1.scrollIntoView({ behavior: 'smooth' });
+// });
+// 
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+/*
+// TYPES OF EVENT AND EVENT HANDLERS
+
+const h1 = document.querySelector('h1');
+
+const alertH1 = function (e) {
+  alert('addEventListener: Great! You are reading the heading :D');
+};
+
+h1.addEventListener('mouseenter', alertH1);
+
+setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
+
+// h1.onmouseenter = function (e) {
+//   alert('onmouseenter: Great! You are reading the heading :D');
+// };
+*/  
+
+// A BETTER WAY: THE INTERSECTION OBSERVER API
+
+// const header = document.querySelector('.header');
+// const navHeight = nav.getBoundingClientRect().height;
+// console.log(navHeight);
+
+// const stickyNav = function (entries) {
+//   const [entry] = entries;
+//   // console.log(entry);
+
+//   if (!entry.isIntersecting) nav.classList.add('sticky');
+//   else nav.classList.remove('sticky');
+// };
+
+// const headerObserver = new IntersectionObserver(stickyNav, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: `-${navHeight}px`,
+// });
+
+// headerObserver.observe(header);
+
+
+// //----------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// // REVEALING ELEMENTS ON SCROLL
+
+// const allSections = document.querySelectorAll('.section');
+
+// const revealSection = function (entries, observer) {
+//   entries.forEach(entry => {
+//     if (!entry.isIntersecting) return;
+
+//     entry.target.classList.remove('section--hidden');
+//     observer.unobserve(entry.target);
+//   });
+// };
+
+// const sectionObserver = new IntersectionObserver(revealSection, {
+//   root: null,
+//   threshold: 0.15,
+// });
+
+// allSections.forEach(function (section) {
+//   sectionObserver.observe(section);
+//   section.classList.add('section--hidden');
+// });
