@@ -340,62 +340,99 @@
 
 // INHERITANCE BETWEEN "CLASSES": ES6 CLASSES 
 
-class PersonCl {
-  constructor(fullName, birthYear) {
-    this.fullName = fullName;
-    this.birthYear = birthYear;
-  }
+// class PersonCl {
+//   constructor(fullName, birthYear) {
+//     this.fullName = fullName;
+//     this.birthYear = birthYear;
+//   }
 
-  // Instance methods
+//   // Instance methods
+//   calcAge() {
+//     console.log(2025 - this.birthYear);
+//   }
+
+//   greet() {
+//     console.log(`Hey ${this.fullName}`);
+//   }
+
+//   get age() {
+//     return 2025 - this.birthYear;
+//   }
+
+//   set fullName(name) {
+//     if (name.includes(' ')) this._fullName = name;
+//     else alert(`${name} is not a full name!`);
+//   }
+
+//   get fullName() {
+//     return this._fullName;
+//   }
+
+//   // Static method
+//   static hey() {
+//     console.log('Hey there');
+//   }
+// }
+
+// class StudentCl extends PersonCl {
+//   constructor(fullName, birthYear, course) {
+//     // Always needs to happen first!
+//     super(fullName, birthYear);
+//     this.course = course;
+//   }
+
+//   introduce() {
+//     console.log(`My name is ${this.fullName} and I study ${this.course}`);
+//   }
+
+//   calcAge() {
+//     console.log(
+//       `I'm ${
+//         2025 - this.birthYear
+//       } years old, but as a student I feel more like ${
+//         2025 - this.birthYear + 10
+//       }`
+//     );
+//   }
+// }
+
+// const Shrii = new StudentCl('Shrii', 2005, 'Computer Science');
+// Shrii.introduce();
+// Shrii.calcAge();
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// INHERITANCE BETWEEN "CLASSES": OBJECT.CREATE
+
+const PersonProto = {
   calcAge() {
     console.log(2025 - this.birthYear);
-  }
+  },
 
-  greet() {
-    console.log(`Hey ${this.fullName}`);
-  }
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
 
-  get age() {
-    return 2025 - this.birthYear;
-  }
+const steven = Object.create(PersonProto);
 
-  set fullName(name) {
-    if (name.includes(' ')) this._fullName = name;
-    else alert(`${name} is not a full name!`);
-  }
+const StudentProto = Object.create(PersonProto);
+StudentProto.init = function (firstName, birthYear, course) {
+  PersonProto.init.call(this, firstName, birthYear);
+  this.course = course;
+};
 
-  get fullName() {
-    return this._fullName;
-  }
+StudentProto.introduce = function () {
+  // BUG in video:
+  // console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  
+  // FIX:
+  console.log(`My name is ${this.firstName} and I study ${this.course}`);
+};
 
-  // Static method
-  static hey() {
-    console.log('Hey there');
-  }
-}
+const Priya = Object.create(StudentProto);
+Priya.init('Sakshi', 2010, 'Computer Science');
+Priya.introduce();
+Priya.calcAge();
 
-class StudentCl extends PersonCl {
-  constructor(fullName, birthYear, course) {
-    // Always needs to happen first!
-    super(fullName, birthYear);
-    this.course = course;
-  }
-
-  introduce() {
-    console.log(`My name is ${this.fullName} and I study ${this.course}`);
-  }
-
-  calcAge() {
-    console.log(
-      `I'm ${
-        2025 - this.birthYear
-      } years old, but as a student I feel more like ${
-        2025 - this.birthYear + 10
-      }`
-    );
-  }
-}
-
-const Shrii = new StudentCl('Shrii', 2005, 'Computer Science');
-Shrii.introduce();
-Shrii.calcAge();
