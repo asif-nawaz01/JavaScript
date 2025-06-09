@@ -53,6 +53,7 @@
 // console.log(Aashu.hasOwnProperty('firstName'));
 // console.log(Nawaz.hasOwnProperty('species'));
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // PROTOTYPAL INHERITANCE ON BUILT-IN OBJECTS
 
 // console.log(Aashu.__proto__);
@@ -114,6 +115,7 @@
 //     this.birthYear = birthYear;
 //   }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``
 //   // Instance methods
 //   // Methods will be added to .prototype property
 //   calcAge() {
@@ -138,6 +140,7 @@
 //     return this._fullName;
 //   }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //   // Static method
 //   static hey() {
 //     console.log('Hey there');
@@ -163,6 +166,8 @@
 
 // const walter = new PersonCl('Asif NAwaz', 2003);
 // // PersonCl.hey();
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // SETTERS & GETTERS
 // const account = {
@@ -212,35 +217,80 @@
 // Shriii.init('Shriii', 2000);
 // Shriii.calcAge();
 
-class CarCl {
-  constructor(make, speed) {
-    this.make = make;
-    this.speed = speed;
-  }
 
-  accelerate() { 
-    this.speed += 10;
-    console.log(`${this.make} is going at ${this.speed} km/h`);
-  }
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// class CarCl {
+//   constructor(make, speed) {
+//     this.make = make;
+//     this.speed = speed;
+//   }
 
-  brake() {
-    this.speed -= 5;
-    console.log(`${this.make} is going at ${this.speed} km/h`);
-  }
+//   accelerate() { 
+//     this.speed += 10;
+//     console.log(`${this.make} is going at ${this.speed} km/h`);
+//   }
 
-  get speedUS() {
-    return this.speed / 1.6;
-  }
+//   brake() {
+//     this.speed -= 5;
+//     console.log(`${this.make} is going at ${this.speed} km/h`);
+//   }
 
-  set speedUS(speed) {
-    this.speed = speed * 1.6;
-  }
-}
+//   get speedUS() {
+//     return this.speed / 1.6;
+//   }
 
-const ford = new CarCl('Ford', 120);
-console.log(ford.speedUS);
-ford.accelerate();
-ford.accelerate();
-ford.brake();
-ford.speedUS = 50;
-console.log(ford); 
+//   set speedUS(speed) {
+//     this.speed = speed * 1.6;
+//   }
+// }
+
+// const ford = new CarCl('Ford', 120);
+// console.log(ford.speedUS);
+// ford.accelerate();
+// ford.accelerate();
+// ford.brake();
+// ford.speedUS = 50;
+// console.log(ford); 
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``
+
+// INHERITANCE BETWEEN "CLASSES": CONSTRUCTOR FUNCTIONS
+
+// const Person = function(firstName, birthYear) {
+   
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+// };
+
+// Person.prototype.calcAge = function () {
+//   console.log(2025 - this.birthYear);
+// };
+
+// const Student = function(firstName, birthYear, course) {
+//   this.firstName = firstName;
+//   this.birthYear = birthYear;
+//   this.course = course;
+// };
+
+// // Linking prototypes
+// Student.prototype = Object.create(Person.prototype);
+
+// Student.prototype.introduce = function () {
+//   console.log(`My name is ${this.firstName} and I study ${this.course}`);
+// };
+
+// const mike = new Student('Nawaz', 2003, 'Computer Science');
+// mike.introduce();
+// mike.calcAge();
+
+// console.log(mike.__proto__);
+// console.log(mike.__proto__.__proto__);
+
+// console.log(mike instanceof Student);
+// console.log(mike instanceof Person);
+// console.log(mike instanceof Object);
+
+// Student.prototype.constructor = Student;
+// console.dir(Student.prototype.constructor);
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
