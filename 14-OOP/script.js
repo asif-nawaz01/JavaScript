@@ -404,35 +404,82 @@
 
 // INHERITANCE BETWEEN "CLASSES": OBJECT.CREATE
 
-const PersonProto = {
-  calcAge() {
-    console.log(2025 - this.birthYear);
-  },
+// const PersonProto = {
+//   calcAge() {
+//     console.log(2025 - this.birthYear);
+//   },
 
-  init(firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-  },
-};
+//   init(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   },
+// };
 
-const steven = Object.create(PersonProto);
+// const steven = Object.create(PersonProto);
 
-const StudentProto = Object.create(PersonProto);
-StudentProto.init = function (firstName, birthYear, course) {
-  PersonProto.init.call(this, firstName, birthYear);
-  this.course = course;
-};
+// const StudentProto = Object.create(PersonProto);
+// StudentProto.init = function (firstName, birthYear, course) {
+//   PersonProto.init.call(this, firstName, birthYear);
+//   this.course = course;
+// };
 
-StudentProto.introduce = function () {
-  // BUG in video:
-  // console.log(`My name is ${this.fullName} and I study ${this.course}`);
+// StudentProto.introduce = function () {
+//   // BUG in video:
+//   // console.log(`My name is ${this.fullName} and I study ${this.course}`);
   
-  // FIX:
-  console.log(`My name is ${this.firstName} and I study ${this.course}`);
-};
+//   // FIX:
+//   console.log(`My name is ${this.firstName} and I study ${this.course}`);
+// };
 
-const Priya = Object.create(StudentProto);
-Priya.init('Sakshi', 2010, 'Computer Science');
-Priya.introduce();
-Priya.calcAge();
+// const Priya = Object.create(StudentProto);
+// Priya.init('Sakshi', 2010, 'Computer Science');
+// Priya.introduce();
+// Priya.calcAge();
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+
+// ANOTHER CLASS EXAMPLE
+
+class Account {
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this.pin = pin;
+    this.movements = [];
+    this.locale = navigator.language;
+
+    console.log(`Thanks for opening an account, ${owner}`);
+  }
+
+  // Public interface
+  deposit(val) {
+    this.movements.push(val);
+  }
+
+  withdraw(val) {
+    this.deposit(-val);
+  }
+
+  approveLoan(val) {
+    return true;
+  }
+
+  requestLoan(val) {
+    if (this.approveLoan(val)) {
+      this.deposit(val);
+      console.log(`Loan approved`);
+    }
+  }
+}
+
+const Acc1 = new Account('Andrew', 'EUR', 1111);
+
+// acc1.movements.push(250);
+// acc1.movements.push(-140);
+acc1.deposit(250);
+acc1.withdraw(140);
+acc1.approveLoan(1000);
+acc1.requestLoan(1000);
+
+console.log(acc1);
+console.log(acc1.pin);
