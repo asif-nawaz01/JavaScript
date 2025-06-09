@@ -440,46 +440,59 @@
 
 // ANOTHER CLASS EXAMPLE
 
-class Account {
-  constructor(owner, currency, pin) {
-    this.owner = owner;
-    this.currency = currency;
-    this.pin = pin;
-    this.movements = [];
-    this.locale = navigator.language;
+// class Account {
+//   constructor(owner, currency, pin) {
+//     this.owner = owner;
+//     this.currency = currency;
+//     this.pin = pin;
+//     this.movements = [];
+//     this.locale = navigator.language;
 
-    console.log(`Thanks for opening an account, ${owner}`);
-  }
+//     console.log(`Thanks for opening an account, ${owner}`);
+//   }
 
-  // Public interface
-  deposit(val) {
-    this.movements.push(val);
-  }
+//   // Public interface
+//   deposit(val) {
+//     this.movements.push(val);
+//   }
 
-  withdraw(val) {
-    this.deposit(-val);
-  }
+//   withdraw(val) {
+//     this.deposit(-val);
+//   }
 
-  approveLoan(val) {
-    return true;
-  }
+//   approveLoan(val) {
+//     return true;
+//   }
 
-  requestLoan(val) {
-    if (this.approveLoan(val)) {
-      this.deposit(val);
-      console.log(`Loan approved`);
-    }
-  }
-}
+//   requestLoan(val) {
+//     if (this.approveLoan(val)) {
+//       this.deposit(val);
+//       console.log(`Loan approved`);
+//     }
+//   }
+// }
 
-const Acc1 = new Account('Andrew', 'EUR', 1111);
+// const Acc1 = new Account('Andrew', 'EUR', 1111);
 
-// acc1.movements.push(250);
-// acc1.movements.push(-140);
-acc1.deposit(250);
-acc1.withdraw(140);
-acc1.approveLoan(1000);
-acc1.requestLoan(1000);
+// // acc1.movements.push(250);
+// // acc1.movements.push(-140);
+// acc1.deposit(250);
+// acc1.withdraw(140);
+// acc1.approveLoan(1000);
+// acc1.requestLoan(1000);
 
-console.log(acc1);
-console.log(acc1.pin);
+// console.log(acc1);
+// console.log(acc1.pin);
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// ENCAPSULATION: PRIVATE CLASS FIELDS AND METHODS 
+
+// 1) Public fields
+// 2) Private fields
+// 3) Public methods
+// 4) Private methods
+// STATIC version of these 4
+
+//  
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
