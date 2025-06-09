@@ -20,7 +20,7 @@ console.log(Anshu);
 // 3. {} linked to prototype
 // 4. function automatically return {}
 
-const Nawaz = new Person('Nawaz', 2005);
+const Nawaz = new Person('Nawaz', 2003);
 const Shrii = new Person('Shrii', 2005);
 console.log(Nawaz, Shrii);
 
