@@ -431,3 +431,97 @@
 // console.log('FIRST');
 
 
+
+// try {
+//   let y = 1;
+//   const x = 2;
+//   y = 3;
+// } catch (err) {
+//   alert(err.message);
+// }
+
+
+///////////////////////////////////////
+// Returning Values from Async Functions
+// getPosition = function () {
+//   return new Promise(function (resolve, reject) {
+//     navigator.geolocation.getCurrentPosition(resolve, reject);
+//   });
+// };
+
+// whereAmI = async function () {
+//   try {
+//     // Geolocation
+//     const pos = await getPosition();
+//     const { latitude: lat, longitude: lng } = pos.coords;
+
+//     // Reverse geocoding
+//     const resGeo = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`);
+//     if (!resGeo.ok) throw new Error('Problem getting location data');
+//     const dataGeo = await resGeo.json();
+
+//     // Country data
+//     const res = await fetch(
+//       `https://restcountries.com/v2/name/${dataGeo.country}`
+//     );
+//     if (!resGeo.ok) throw new Error('Problem getting country');
+//     const data = await res.json();
+//     renderCountry(data[0]);
+
+//     return `You are in ${dataGeo.city}, ${dataGeo.country}`;
+//   } catch (err) {
+//     console.error(`${err} 💥`);
+//     renderError(`💥 ${err.message}`);
+
+//     // Reject promise returned from async function
+//     throw err;
+//   }
+// };
+
+
+
+// console.log('1: Will get location');
+
+// (async function () {
+//   try {
+//     const city = await whereAmI();
+//     console.log(`2: ${city}`);
+//   } catch (err) {
+//     console.error(`2: ${err.message} 💥`);
+//   }
+//   console.log('3: Finished getting location');
+// })();
+
+
+// // Running Promises in Parallel
+// const get3Countries = async function (c1, c2, c3) {
+//   try {
+
+//     const data = await Promise.all([
+//       getJSON(`https://restcountries.com/v2/name/${c1}`),
+//       getJSON(`https://restcountries.com/v2/name/${c2}`),
+//       getJSON(`https://restcountries.com/v2/name/${c3}`),
+//     ]);
+//     console.log(data.map(d => d[0].capital));
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
+// get3Countries('portugal', 'canada', 'tanzania');
+
+// (async function () {
+//   const res = await Promise.race([
+//     getJSON(`https://restcountries.com/v2/name/italy`),
+//     getJSON(`https://restcountries.com/v2/name/egypt`),
+//     getJSON(`https://restcountries.com/v2/name/mexico`),
+//   ]);
+//   console.log(res[0]);
+// })();
+
+// const timeout = function (sec) {
+//   return new Promise(function (_, reject) {
+//     setTimeout(function () {
+//       reject(new Error('Request took too long!'));
+//     }, sec * 1000);
+//   });
+// };
