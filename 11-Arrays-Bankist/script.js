@@ -1083,4 +1083,5 @@ console.log(dogsGroupedByOwners);
 const dogsSorted = dogs.toSorted((a, b) => a.recFood - b.recFood);
 console.log(dogsSorted);
 
-// *****************COMPLETED*********************
+                                  // *****************COMPLETED*********************
+                                  

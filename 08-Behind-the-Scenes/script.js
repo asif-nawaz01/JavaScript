@@ -201,13 +201,13 @@ const jessica = {
 const jessicaCopy = { ...jessica };
 jessicaCopy.lastName = 'Davis';
 
-// jessicaCopy.familiy.push('Mary');
-// jessicaCopy.familiy.push('John');
+jessicaCopy.familiy.push('Mary');
+jessicaCopy.familiy.push('John');
 
-// console.log('Before:', jessica);
-// console.log('After:', jessicaCopy);
+console.log('Before:', jessica);
+console.log('After:', jessicaCopy);
 
-// Deep copy/clone
+Deep copy/clone
 const jessicaClone = structuredClone(jessica);
 jessicaClone.familiy.push('Mary');
 jessicaClone.familiy.push('John');
