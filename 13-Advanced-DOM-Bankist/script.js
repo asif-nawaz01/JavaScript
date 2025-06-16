@@ -56,7 +56,7 @@ console.log(document.getElementsByClassName('btn'));
 
 // --------------------- CREATING AND INSERTING ELEMENTS --------------------//
 
-/*
+
 // CREATING AND INSERTING ELEMENTS
 
 // .insertAdjacentHTML
@@ -77,14 +77,14 @@ document.querySelector('.btn--close-cookie').addEventListener('click', function 
   //message.remove();
   message.parentElement.removeChild(message);
 });
-*/
+
 
 
 //=================================================================================================================================================//
 
 // --------------------- STYLES, ATTRIBUTES AND CLASSES --------------------//
 
-/*  
+ 
 // Styles
 message.style.backgroundColor = '#37383d';
 message.style.width = '120%';
@@ -130,14 +130,14 @@ logo.classList.contains('c'); // not includes
 
 // Don't use
 logo.clasName = 'Jonas';
-*/
+
 
 
 //=================================================================================================================================================//
 
 // --------------------- IMPLEMENTING SMOOTH SCROLLING --------------------//
 
-/*
+
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 
@@ -169,13 +169,13 @@ btnScrollTo.addEventListener('click', function(e) {
 
   section1.scrollIntoView({ behavior: 'smooth' });
 });
-*/
+
 
 //=================================================================================================================================================//
 
 // --------------------- TYPES OF EVENT AND EVENT HANDLERS --------------------//
 
-/*
+
 const h1 = document.querySelector('h1');
 
 const alertH1 = function (e) {
@@ -189,14 +189,14 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 // h1.onmouseenter = function (e) {
 //   alert('onmouseenter: Great! You are reading the heading :D');
 // };
-*/
+
 
 
 //=================================================================================================================================================//
 
 // --------------------- THE INTERSECTION OBSERVER API --------------------//
 
-/*
+
 const header = document.querySelector('.header');
 const navHeight = nav.getBoundingClientRect().height;
 console.log(navHeight);
@@ -216,7 +216,7 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 
 headerObserver.observe(header);
-*/
+
 
 //=================================================================================================================================================//
 
